@@ -17,7 +17,6 @@ class BarraDePesquisa extends StatefulWidget {
 
 class _BarraDePesquisaState extends State<BarraDePesquisa> {
   BarraPesquisaController controller = BarraPesquisaController();
-
   List<String> sugestoes = [];
 
   @override
@@ -33,11 +32,22 @@ class _BarraDePesquisaState extends State<BarraDePesquisa> {
         textFieldConfiguration: TextFieldConfiguration(
           decoration: InputDecoration(
             hintText: "Pesquisar",
-            suffixIcon: IconButton(
+            contentPadding: EdgeInsets.symmetric(horizontal: 16, vertical: 12),
+            border: OutlineInputBorder(
+              borderRadius: BorderRadius.circular(20),
+            ),
+            filled: true,
+            fillColor: Colors.white,
+            suffixIcon: ElevatedButton(
               onPressed: () {
                 // Implemente a lógica aqui, se necessário
               },
-              icon: Icon(Icons.search),
+              style: ElevatedButton.styleFrom(
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(20),
+                ),
+              ),
+              child: Icon(Icons.search),
             ),
           ),
         ),
@@ -52,6 +62,7 @@ class _BarraDePesquisaState extends State<BarraDePesquisa> {
         },
         itemBuilder: (context, suggestion) {
           return ListTile(
+            leading: Icon(Icons.location_on), // Ícone para cada sugestão
             title: Text(suggestion),
           );
         },
@@ -60,11 +71,13 @@ class _BarraDePesquisaState extends State<BarraDePesquisa> {
 
           if (orgaoSelecionado != null) {
             Navigator.push(
-                context,
-                MaterialPageRoute(
-                    builder: (context) => Orgao(
-                          orgao: orgaoSelecionado,
-                        )));
+              context,
+              MaterialPageRoute(
+                builder: (context) => Orgao(
+                  orgao: orgaoSelecionado,
+                ),
+              ),
+            );
           }
         },
       ),
