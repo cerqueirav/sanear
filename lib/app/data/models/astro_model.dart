@@ -19,12 +19,12 @@ class AstroModel extends Equatable {
   final String moonIllumination;
 
   factory AstroModel.fromJson(Map<String, dynamic> json) => AstroModel(
-        sunrise: json["sunrise"],
-        sunset: json["sunset"],
-        moonrise: json["moonrise"],
-        moonset: json["moonset"],
-        moonPhase: json["moon_phase"],
-        moonIllumination: json["moon_illumination"],
+        sunrise: json["sunrise"].toString(),
+        sunset: json["sunset"].toString(),
+        moonrise: json["moonrise"].toString(),
+        moonset: json["moonset"].toString(),
+        moonPhase: json["moon_phase"].toString(),
+        moonIllumination: json["moon_illumination"].toString(),
       );
 
   Astro toEntity() => Astro(
