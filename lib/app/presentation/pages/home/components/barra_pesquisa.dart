@@ -39,9 +39,7 @@ class _BarraDePesquisaState extends State<BarraDePesquisa> {
             filled: true,
             fillColor: Colors.white,
             suffixIcon: ElevatedButton(
-              onPressed: () {
-                // Implemente a lógica aqui, se necessário
-              },
+              onPressed: () {},
               style: ElevatedButton.styleFrom(
                 shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(20),

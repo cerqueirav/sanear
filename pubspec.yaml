@@ -88,6 +88,8 @@ flutter:
     - assets/img/embasa.png
     - assets/img/limpurb.png
     - assets/img/codesal.png
+    - assets/img/seinfra.png
+    - assets/img/corpo-bombeiros.png
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
